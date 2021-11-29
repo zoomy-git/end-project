@@ -17,3 +17,4 @@ use App\Http\Controllers\ControllerHalaman;
 
 Route::get('/', [ControllerHalaman::class, 'index']);
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
+//hello
