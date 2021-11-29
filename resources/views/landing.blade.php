@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href = "./resources/css/bootstrap-css" style="stylesheet">
+    @include('partials.import')
     <title>Landing Page</title>
 </head>
+
 <body>
-    <div class="container">
-        test
-        <div class="navbar">
-            <li>bwa</li>
-        </div>
-    </div>
-
-
+    
 </body>
+
 </html>
