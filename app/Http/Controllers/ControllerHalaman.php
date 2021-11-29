@@ -12,4 +12,11 @@ class ControllerHalaman extends Controller
             'judul' => $halaman,
         ]);
     }
+
+    public function landing()
+    {
+        return view('landing', [
+            
+        ]);
+    }
 }
