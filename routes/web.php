@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerBeranda;
 use App\Http\Controllers\ControllerHalaman;
+use App\Http\Controllers\TargetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,11 @@ use App\Http\Controllers\ControllerHalaman;
 
 
 Route::get('/', [ControllerHalaman::class, 'landing']);
+<<<<<<< HEAD
+Route::get('/Target', [TargetController::class, 'index']);
+=======
 
 Route::get('/login', [ControllerHalaman::class, 'login']);
 
+>>>>>>> 300de99f7749c7041fc143f13cb57c1e220110ae
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
-//hello
