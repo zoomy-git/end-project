@@ -1,5 +1,8 @@
 @extends('layouts/main')
 
+@section('header')
+    @include('partials.nav')
+@endsection
 
 @section('content')
     <div class="container w-75 mt-4">
