@@ -19,5 +19,11 @@ use App\Http\Controllers\TargetController;
 
 
 Route::get('/', [ControllerHalaman::class, 'landing']);
+<<<<<<< HEAD
 Route::get('/Target', [TargetController::class, 'index']);
+=======
+
+Route::get('/login', [ControllerHalaman::class, 'login']);
+
+>>>>>>> 300de99f7749c7041fc143f13cb57c1e220110ae
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);

@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href = "./resources/css/bootstrap-css" style="stylesheet">
+    @include('partials.import')
+    <style>
+        body{
+            
+            margin: auto;
+            padding-bottom: 10rem;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: rgb(248, 245, 241, 0.5);
+        }
+
+        .light{
+            background-color: rgb(248, 245, 241);
+            
+            color: rgb(87, 68, 62);
+            background-color: #F8F5F1;
+        }
+
+        .light{
+            background-color: #F8F5F1;
+            color: #57443E;
+        }
+
+        .dark{
+            background-color: rgb(233, 137, 106);
+            color: rgb(248, 245, 241);
+        }
+    </style>
+
     <title>Landing Page</title>
 </head>
+
 <body>
-    <div class="container">
-        test
-        <div class="navbar">
-            <li>bwa</li>
+    <div class="d-flex">
+        <div class="container-sm">
+            <span>
+                
+            <h1><strong>Some Web App</strong></h1>
+            <h4>some persuasive words to make you want to use this web app</h4> 
+            </span>
+        </div>
+        <div class="container-sm w-auto">
+            <div class="card mx-auto rounded-3" style="height: 18rem; width: 18rem;">
+                <div class="card-body d-flex justify-content-center dark">
+                <form action="/login" class="align-items-center">
+                <h1>Login</h1>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="username/email">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="password">
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn" style="background-color: #DB7E61;">Login</button>
+                </div>
+                <div id="labelRegister" class="form-text dark">Belum punya akun? klik 
+                <a href='/register' style="color: #57443E;">disini</a>
+                </div>
+                </form>
+                </div>
+              </div>
         </div>
     </div>
-
-
 </body>
+
 </html>
