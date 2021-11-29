@@ -1,9 +1,10 @@
 @extends('layouts/main')
 
+
 @section('header')
-    @include('partials.nav')
+    @include('partials.close-button')
 @endsection
 
 @section('content')
-    <h1>Materi</h1>
+    <h1>Tentang</h1>
 @endsection

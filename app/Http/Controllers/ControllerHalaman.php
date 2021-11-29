@@ -22,7 +22,7 @@ class ControllerHalaman extends Controller
 
     public function login()
     {
-        return self::index('beranda');
+        return self::index('Beranda');
     }
 
 }

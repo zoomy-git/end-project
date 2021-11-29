@@ -2,36 +2,6 @@
 <html lang="en">
 <head>
     @include('partials.import')
-    <style>
-        body{
-            
-            margin: auto;
-            padding-bottom: 10rem;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            
-            background-color: rgb(248, 245, 241, 0.5);
-        }
-
-        .light{
-            background-color: rgb(248, 245, 241);
-            
-            color: rgb(87, 68, 62);
-            background-color: #F8F5F1;
-        }
-
-        .light{
-            background-color: #F8F5F1;
-            color: #57443E;
-        }
-
-        .dark{
-            background-color: rgb(233, 137, 106);
-            color: rgb(248, 245, 241);
-        }
-    </style>
 
     <title>Landing Page</title>
 </head>
