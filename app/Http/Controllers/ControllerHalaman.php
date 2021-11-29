@@ -19,4 +19,10 @@ class ControllerHalaman extends Controller
             
         ]);
     }
+
+    public function login()
+    {
+        return self::index('beranda');
+    }
+
 }
