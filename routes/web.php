@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerBeranda;
 use App\Http\Controllers\ControllerHalaman;
+use App\Http\Controllers\TargetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,5 @@ use App\Http\Controllers\ControllerHalaman;
 
 
 Route::get('/', [ControllerHalaman::class, 'landing']);
+Route::get('/Target', [TargetController::class, 'index']);
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
-//hello

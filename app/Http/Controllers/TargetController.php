@@ -15,6 +15,14 @@ class TargetController extends Controller
     public function index()
     {
         //
+          	// mengambil data pegawai
+    	$target=Target::all();
+        return view('Target', [
+            'judul' => "Target",
+            'target' => $target
+        ]);
+ 
+    	// mengirim data targets ke view targets
     }
 
     /**
