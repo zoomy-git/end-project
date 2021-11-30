@@ -20,12 +20,14 @@ class DatabaseSeeder extends Seeder
         for($x = 1; $x <= 10; $x++){
             DB::table('aktivitas')->insert([
                 'pukul' => Carbon::now(),
+                'tanggal' => Carbon::now(),
                 'nama' => Str::random(10),
                 'kategori' => Str::random(10),
             ]);
             DB::table('materis')->insert([
                 'link' => "https://www.youtube.com/embed/S0nAJjAqfpQ",
                 'kategori' => "Pemrograman Web",
+                'deskripsi' => "Apa itu method POST dan GET",
             ]);
             DB::table('targets')->insert([
                 'nama' => Str::random(10),

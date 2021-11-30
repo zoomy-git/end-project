@@ -17,6 +17,7 @@ class CreateMaterisTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('kategori');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

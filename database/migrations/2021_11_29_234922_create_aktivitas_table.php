@@ -18,6 +18,7 @@ class CreateAktivitasTable extends Migration
             $table->time('pukul');
             $table->string('nama');
             $table->string('kategori');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }
