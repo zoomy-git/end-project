@@ -44,6 +44,12 @@ class TargetController extends Controller
     public function store(Request $request)
     {
         //
+        $tambah = new Target();
+        $tambah->nama = $request->nama;
+        $tambah->kategori = $request->kategori;
+        $tambah->tanggal = $request->tanggal;
+        $tambah->save();
+        return redirect('/Target');
     }
 
     /**
