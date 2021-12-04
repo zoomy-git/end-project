@@ -43,6 +43,13 @@ class AktivitasController extends Controller
     public function store(Request $request)
     {
         //
+        $tambah = new Aktivitas();
+        $tambah->nama = $request->nama;
+        $tambah->pukul = $request->pukul;
+        $tambah->kategori = $request->kategori;
+        $tambah->tanggal = $request->tanggal;
+        $tambah->save();
+        return redirect('/Aktivitas');
     }
 
     /**

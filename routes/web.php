@@ -26,3 +26,6 @@ Route::get('/Materi', [MateriController::class, 'index']);
 Route::get('/Target', [TargetController::class, 'index']);
 Route::get('/Aktivitas', [AktivitasController::class, 'index']);
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
+
+Route::post('/tambahaktivitas', [AktivitasController::class, 'store'])->name('tambahaktivitas');
+
