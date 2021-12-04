@@ -5,10 +5,14 @@
         <title>End Project | {{ $judul }}</title>
     </head>
 <body>
-    <div class="card container w-75 p-0" style="margin-top:10vh;">
+    <div class="card container w-75 p-0" 
+    {{-- style="margin-top:10vh;" --}}
+    >
         @yield('header')
         
-        <div class="card-body light d-flex" style="height:50vh;">
+        <div class="card-body light d-flex" 
+        {{-- style="height:50vh" --}}
+        >
             @yield('content')
         </div>
 
