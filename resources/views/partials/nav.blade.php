@@ -1,3 +1,12 @@
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+
+    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                    this.closest('form').submit();">
+        {{ __('Log Out') }}
+    </x-jet-responsive-nav-link>
+</form>
 <ul class="nav nav-tabs dark pt-3 ps-5" >
     <li class="nav-item {{ $judul === 'Beranda' ? 'active light' : 'text-black' }}">
         <a class="nav-link text-black p-3" href="/Beranda">Beranda</a>

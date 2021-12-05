@@ -17,16 +17,10 @@ use App\Http\Controllers\TargetController;
 |
 */
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/Beranda', function () {
-//     return view('Beranda');
-// })->name('Beranda');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('/', [ControllerHalaman::class, 'landing']);
+    Route::get('/dashboard', [ControllerHalaman::class, 'landing']);
     Route::get('/Materi', [MateriController::class, 'index']);
     Route::get('/Target', [TargetController::class, 'index']);
     Route::get('/Aktivitas', [AktivitasController::class, 'index']);
