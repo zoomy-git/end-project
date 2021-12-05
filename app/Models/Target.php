@@ -9,4 +9,7 @@ class Target extends Model
 {
     // use HasFactory;
     protected $table = "targets";
+    protected $fillable = [
+        'nama', 'tanggal','kategori',
+    ];
 }

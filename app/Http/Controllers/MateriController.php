@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materi;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreMateriRequest;
-use App\Http\Requests\UpdateMateriRequest;
 
 class MateriController extends Controller
 {
@@ -40,9 +40,22 @@ class MateriController extends Controller
      * @param  \App\Http\Requests\StoreMateriRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMateriRequest $request)
+    public function store(Request $request)
     {
         //
+        $tambah = new Materi();
+        if ($request->isVideo==="true"){
+            $tambah->isVideo=true;
+        } else {
+            $tambah->isVideo=false;
+        }
+        $embed = $request->link;
+        if ($tambah->isVideo){$embed = Str::replace('watch?v=', 'embed/', $request->link);}
+        $tambah->link = $embed;
+        $tambah->deskripsi = $request->deskripsi;
+        $tambah->kategori = $request->kategori;
+        $tambah->save();
+        return redirect('/Materi');
     }
 
     /**
@@ -74,9 +87,22 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMateriRequest $request, Materi $materi)
+    public function update(Request $request)
     {
         //
+        $materi = Materi::find($request->id);
+        if ($request->isVideo==="true"){
+            $materi->isVideo=true;
+        } else {
+            $materi->isVideo=false;
+        }
+        $embed = $request->link;
+        if ($materi->isVideo){$embed = Str::replace('watch?v=', 'embed/', $request->link);}
+        $materi->link = $embed;
+        $materi->deskripsi = $request->deskripsi;
+        $materi->kategori = $request->kategori;
+        $materi->save();
+        return redirect('/Materi');
     }
 
     /**
@@ -85,8 +111,11 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Materi $materi)
+    public function destroy($id)
     {
         //
+        $materi = Materi::find($id);
+        $materi->delete();
+        return redirect('/Materi');
     }
 }

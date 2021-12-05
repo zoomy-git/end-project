@@ -18,6 +18,7 @@ class CreateMaterisTable extends Migration
             $table->string('link');
             $table->string('kategori');
             $table->text('deskripsi');
+            $table->boolean('isVideo');
             $table->timestamps();
         });
     }

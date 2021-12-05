@@ -16,7 +16,8 @@ class TargetController extends Controller
     {
         //
           	// mengambil data pegawai
-    	$target=Target::all();
+    	$target=Target::orderBy('tanggal','ASC')->get();
+
         return view('Target', [
             'judul' => "Target",
             'target' => $target
@@ -44,6 +45,12 @@ class TargetController extends Controller
     public function store(Request $request)
     {
         //
+        $tambah = new Target();
+        $tambah->nama = $request->nama;
+        $tambah->kategori = $request->kategori;
+        $tambah->tanggal = $request->tanggal;
+        $tambah->save();
+        return redirect('/Target');
     }
 
     /**
@@ -75,9 +82,15 @@ class TargetController extends Controller
      * @param  \App\Models\Target  $target
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Target $target)
+    public function update(Request $request)
     {
         //
+        $target = Target::find($request->id);
+        $target->nama = $request->nama;
+        $target->kategori = $request->kategori;
+        $target->tanggal = $request->tanggal;
+        $target->save();
+        return redirect('/Target');
     }
 
     /**
@@ -86,8 +99,11 @@ class TargetController extends Controller
      * @param  \App\Models\Target  $target
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Target $target)
+    public function destroy($id)
     {
         //
+        $target = Target::find($id);
+        $target->delete();
+        return redirect('/Target');
     }
 }

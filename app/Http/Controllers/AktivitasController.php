@@ -16,7 +16,8 @@ class AktivitasController extends Controller
     public function index()
     {
         //
-        $aktivitas=Aktivitas::all();
+        $aktivitas=Aktivitas::orderBy('tanggal', 'ASC')
+            ->orderBy('pukul','ASC')->get();
         return view('Aktivitas', [
             'judul' => "Aktivitas",
             'aktivitas' => $aktivitas
@@ -43,6 +44,13 @@ class AktivitasController extends Controller
     public function store(Request $request)
     {
         //
+        $tambah = new Aktivitas();
+        $tambah->nama = $request->nama;
+        $tambah->pukul = $request->pukul;
+        $tambah->kategori = $request->kategori;
+        $tambah->tanggal = $request->tanggal;
+        $tambah->save();
+        return redirect('/Aktivitas');
     }
 
     /**
@@ -74,9 +82,16 @@ class AktivitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        $aktivitas = Aktivitas::find($request->id);
+        $aktivitas->nama = $request->nama;
+        $aktivitas->pukul = $request->pukul;
+        $aktivitas->kategori = $request->kategori;
+        $aktivitas->tanggal = $request->tanggal;
+        $aktivitas->save();
+        return redirect('/Aktivitas');
     }
 
     /**
@@ -88,5 +103,8 @@ class AktivitasController extends Controller
     public function destroy($id)
     {
         //
+        $aktivitas = Aktivitas::find($id);
+        $aktivitas->delete();
+        return redirect('/Aktivitas');
     }
 }
