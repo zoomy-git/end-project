@@ -32,5 +32,7 @@ Route::post('/updateaktivitas', [AktivitasController::class, 'update'])->name('u
 Route::post('/tambahtarget', [TargetController::class, 'store'])->name('tambahtarget');
 Route::post('/updatetarget', [TargetController::class, 'update'])->name('updatetarget');
 Route::post('/tambahmateri', [MateriController::class, 'store'])->name('tambahmateri');
+Route::post('/updatemateri', [MateriController::class, 'update'])->name('updatemateri');
 Route::get('/hapusaktivitas/{id}', [AktivitasController::class, 'destroy']);
 Route::get('/hapustarget/{id}', [TargetController::class, 'destroy']);
+Route::get('/hapusmateri/{id}', [MateriController::class, 'destroy']);

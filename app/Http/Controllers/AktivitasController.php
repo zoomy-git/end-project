@@ -16,7 +16,8 @@ class AktivitasController extends Controller
     public function index()
     {
         //
-        $aktivitas=Aktivitas::all();
+        $aktivitas=Aktivitas::orderBy('tanggal', 'ASC')
+            ->orderBy('pukul','ASC')->get();
         return view('Aktivitas', [
             'judul' => "Aktivitas",
             'aktivitas' => $aktivitas

@@ -16,7 +16,8 @@ class TargetController extends Controller
     {
         //
           	// mengambil data pegawai
-    	$target=Target::all();
+    	$target=Target::orderBy('tanggal','ASC')->get();
+
         return view('Target', [
             'judul' => "Target",
             'target' => $target

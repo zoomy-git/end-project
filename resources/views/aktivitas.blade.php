@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <h3>Aktivitas Hari Ini:</h3>
+        <h3>Aktivitas Hari Ini ({{ $cdate = date('Y-m-d');  }}) :</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -45,6 +45,9 @@
             <tbody>
                 @foreach ($aktivitas as $a)
                     <tr>
+                        @if ($a->tanggal != $cdate)
+                            @continue;
+                        @endif
                         <td>{{ $a->pukul }}</td>
                         <td>{{ $a->nama }}</td>
                         <td>{{ $a->kategori }}</td>
@@ -53,8 +56,8 @@
                                 data-bs-target="#modalInput{{ $a->id }}">
                                 Edit
                             </button>
-                            <div class="modal fade" id="modalInput{{ $a->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <div class="modal fade" id="modalInput{{ $a->id }}" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -69,7 +72,8 @@
                                                 <input type="text" name="nama" id="nama" value="{{ $a->nama }}">
                                                 <input type="time" name="pukul" id="pukul" value="{{ $a->pukul }}">
                                                 <input type="date" name="tanggal" id="tanggal" value="{{ $a->tanggal }}">
-                                                <input type="text" name="kategori" id="kategori" value="{{ $a->kategori }}">
+                                                <input type="text" name="kategori" id="kategori"
+                                                    value="{{ $a->kategori }}">
                                                 <input type="submit">
                                             </form>
                                         </div>
