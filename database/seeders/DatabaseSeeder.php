@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             ]);
             DB::table('materis')->insert([
                 'link' => "https://www.youtube.com/embed/S0nAJjAqfpQ",
+                'isVideo' =>true,
                 'kategori' => "Pemrograman Web",
                 'deskripsi' => "Apa itu method POST dan GET",
             ]);
