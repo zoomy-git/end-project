@@ -15,14 +15,9 @@ class ControllerHalaman extends Controller
 
     public function landing()
     {
-        return view('landing', [
-            
+        return view('Beranda', [
+            'judul' => 'Beranda'
         ]);
-    }
-
-    public function login()
-    {
-        return self::index('Beranda');
     }
 
 }
