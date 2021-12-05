@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materi;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreMateriRequest;
-use App\Http\Requests\UpdateMateriRequest;
 
 class MateriController extends Controller
 {
@@ -40,9 +39,15 @@ class MateriController extends Controller
      * @param  \App\Http\Requests\StoreMateriRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMateriRequest $request)
+    public function store(Request $request)
     {
         //
+        $tambah = new Materi();
+        $tambah->link = $request->link;
+        $tambah->deskripsi = $request->deskripsi;
+        $tambah->kategori = $request->kategori;
+        $tambah->save();
+        return redirect('/Materi');
     }
 
     /**
@@ -74,7 +79,7 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMateriRequest $request, Materi $materi)
+    public function update(Request $request, Materi $materi)
     {
         //
     }

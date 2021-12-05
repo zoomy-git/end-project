@@ -9,4 +9,6 @@ class Materi extends Model
 {
     // use HasFactory;
     protected $table = "materis";
+    protected $fillable = ['link','kategori','deskripsi',
+        ];
 }
