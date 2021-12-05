@@ -29,6 +29,7 @@
                             <input type="radio" id="artikel" name="isVideo" value="false">
                             <label for="artikel">Artikel</label><br>
                             <input type="submit">
+                        </form>
                     </div>
                 </div>
             </div>

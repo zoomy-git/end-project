@@ -25,6 +25,7 @@
                             <input type="date" name="tanggal" id="tanggal">
                             <input type="text" name="kategori" id="kategori" placeholder="Kategori">
                             <input type="submit">
+                        </form>
                     </div>
                 </div>
             </div>
