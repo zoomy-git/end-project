@@ -32,7 +32,6 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">No.</th>
                     <th scope="col">Materi</th>
                     <th scope="col">Deskripsi</th>
                     <th scope="col">Mata Kuliah</th>
@@ -42,7 +41,6 @@
             <tbody>
                 @foreach ($materi as $m)
                     <tr>
-                        <th scope="row">{{ $m->id }}</th>
                         <td>
                             <iframe width="180" height="120" src="{{ $m->link }}" title="YouTube video player"
                                 frameborder="0"

@@ -28,6 +28,9 @@ Route::get('/Aktivitas', [AktivitasController::class, 'index']);
 Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
 
 Route::post('/tambahaktivitas', [AktivitasController::class, 'store'])->name('tambahaktivitas');
+Route::post('/updateaktivitas', [AktivitasController::class, 'update'])->name('updateaktivitas');
 Route::post('/tambahtarget', [TargetController::class, 'store'])->name('tambahtarget');
+Route::post('/updatetarget', [TargetController::class, 'update'])->name('updatetarget');
 Route::post('/tambahmateri', [MateriController::class, 'store'])->name('tambahmateri');
-
+Route::get('/hapusaktivitas/{id}', [AktivitasController::class, 'destroy']);
+Route::get('/hapustarget/{id}', [TargetController::class, 'destroy']);

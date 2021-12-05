@@ -81,9 +81,16 @@ class AktivitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        $aktivitas = Aktivitas::find($request->id);
+        $aktivitas->nama = $request->nama;
+        $aktivitas->pukul = $request->pukul;
+        $aktivitas->kategori = $request->kategori;
+        $aktivitas->tanggal = $request->tanggal;
+        $aktivitas->save();
+        return redirect('/Aktivitas');
     }
 
     /**
@@ -95,5 +102,8 @@ class AktivitasController extends Controller
     public function destroy($id)
     {
         //
+        $aktivitas = Aktivitas::find($id);
+        $aktivitas->delete();
+        return redirect('/Aktivitas');
     }
 }
