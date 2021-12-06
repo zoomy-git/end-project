@@ -13,7 +13,7 @@ class ControllerHalaman extends Controller
         ]);
     }
 
-    public function landing()
+    public function beranda()
     {
         return view('Beranda', [
             'judul' => 'Beranda'

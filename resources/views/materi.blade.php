@@ -7,9 +7,11 @@
 @section('content')
     <div class="container w-75 mt-4">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="d-flex justify-content-end">
+        <button type="button" class="btn dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Tambah Materi
         </button>
+    </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -35,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered my-3">
             <thead>
                 <tr>
                     <th scope="col">Materi</th>
@@ -102,7 +104,7 @@
             </tbody>
         </table>
 
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th scope="col">Judul</th>

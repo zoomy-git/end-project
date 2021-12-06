@@ -26,7 +26,7 @@
         margin: auto;
         padding-bottom: 10rem;
         display: flex;
-        /* height: 100vh; */
+        height: 100vh;
 
         background-color: rgb(248, 245, 241, 0.4);
 

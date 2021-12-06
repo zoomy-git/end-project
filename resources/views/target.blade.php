@@ -5,11 +5,14 @@
 @endsection
 
 @section('content')
-    <div class="container w-75 mt-4">
+    <div class="container w-75 mt-4 d-flex flex-column">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambah Target
-        </button>
+        <div class="d-flex justify-content-end">
+            
+            <button type="button" class="btn dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Tambah Target
+            </button>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -22,16 +25,16 @@
                         <form action="{{ route('tambahtarget') }}" method="POST">
                             @csrf
                             <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
-                            <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas">
-                            <input type="date" name="tanggal" id="tanggal">
-                            <input type="text" name="kategori" id="kategori" placeholder="Kategori">
+                            <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas" required>
+                            <input type="date" name="tanggal" id="tanggal" required>
+                            <input type="text" name="kategori" id="kategori" placeholder="Kategori" required>
                             <input type="submit">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered my-3">
             <thead>
                 <tr>
                     <th scope="col">Target</th>
@@ -49,7 +52,7 @@
                         <td>{{ $t->tanggal }}</td>
                         <td>{{ $t->kategori }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#modalInput{{ $t->id }}">
                                 Edit
                             </button>
@@ -66,17 +69,17 @@
                                             <form action="updatetarget" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="id" id="id" value={{ $t->id }}>
-                                                <input type="text" name="nama" id="nama" value="{{ $t->nama }}">
-                                                <input type="date" name="tanggal" id="tanggal" value="{{ $t->tanggal }}">
+                                                <input type="text" name="nama" id="nama" value="{{ $t->nama }}" required>
+                                                <input type="date" name="tanggal" id="tanggal" value="{{ $t->tanggal }}" required>
                                                 <input type="text" name="kategori" id="kategori"
-                                                    value="{{ $t->kategori }}">
+                                                    value="{{ $t->kategori }}" required>
                                                 <input type="submit">
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="/hapustarget/{{ $t->id }}" class="btn btn-danger">Hapus</a>
+                            <a href="/hapustarget/{{ $t->id }}" class="btn btn-danger btn-sm">Hapus</a>
                         </td>
                     </tr>
                 @endforeach

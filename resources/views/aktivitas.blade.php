@@ -8,9 +8,13 @@
 
     <div class="container w-75 mt-4">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambah Aktivitas
-        </button>
+        <div class="d-flex justify-content-between">
+            
+            <h3 class="align-self-start" style="font-weight:bold;">Aktivitas Hari Ini ({{ $cdate = date('Y-m-d') }})</h3>
+            <button type="button" class="btn dark align-self-baseline" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Tambah Aktivitas
+            </button>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -33,8 +37,7 @@
                 </div>
             </div>
         </div>
-        <h3>Aktivitas Hari Ini ({{ $cdate = date('Y-m-d') }}) :</h3>
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered my-3">
             <thead>
                 <tr>
                     <th scope="col">Pukul</th>

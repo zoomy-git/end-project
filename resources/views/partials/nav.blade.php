@@ -1,13 +1,19 @@
-<form method="POST" action="{{ route('logout') }}">
-    @csrf
+<div class="box-profile dark px-4 pt-3 d-flex align-items-center justify-content-end">
+    
+    <form method="POST" action="{{ route('logout') }}" class="">
+        @csrf
+        <a class="dark text-decoration-none" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                        this.closest('form').submit();">
+            <strong>
+            {{ __('here to logout') }}
+            </strong>
+        </a>
+        
+    </form>
+</div>
 
-    <x-jet-responsive-nav-link href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                    this.closest('form').submit();">
-        {{ __('Log Out') }}
-    </x-jet-responsive-nav-link>
-</form>
-<ul class="nav nav-tabs dark pt-3 ps-5" >
+<ul class="nav nav-tabs dark ps-5 d-flex flex-row" style="font-weight:bold;">
     <li class="nav-item {{ $judul === 'Beranda' ? 'active light' : 'text-black' }}">
         <a class="nav-link text-black p-3" href="/Beranda">Beranda</a>
     </li>
@@ -20,4 +26,6 @@
     <li class="nav-item {{ $judul === 'Materi' ? 'active light' : 'text-black' }}">
         <a class="nav-link text-black p-3" href="/Materi">Materi</a>
     </li>
+
+        
 </ul>

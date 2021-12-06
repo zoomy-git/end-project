@@ -19,8 +19,8 @@ use App\Http\Controllers\TargetController;
 
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-    Route::get('/', [ControllerHalaman::class, 'landing']);
-    Route::get('/dashboard', [ControllerHalaman::class, 'landing']);
+    Route::get('/', [ControllerHalaman::class, 'beranda']);
+    Route::get('/dashboard', [ControllerHalaman::class, 'beranda']);
     Route::get('/Materi', [MateriController::class, 'index']);
     Route::get('/Target', [TargetController::class, 'index']);
     Route::get('/Aktivitas', [AktivitasController::class, 'index']);
