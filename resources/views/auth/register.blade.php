@@ -16,9 +16,10 @@
 </head>
 
 <body>
-    <div class="card p-4 dark">
+    <div class="card p-4 m-auto mt-4 dark self-align-center">
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" class="
+        d-flex flex-column h-auto">
             
             <h1>Register</h1>
 
@@ -81,6 +82,7 @@
                 </x-jet-button>
             </div>
         </form>
+
     </div>
 
         
