@@ -27,10 +27,17 @@
 
             </h4>
             <div class="target">
-                <p>Selasa, 21 Oktober 2014<br>
-                Basis Data - Memahami Subquery</p>
-                <p>Selasa, 21 Oktober 2014<<br>
-                Basis Data - Memahami Subquery</p>
+                @foreach ($target as $t)
+                    @if ($t->tanggal > $seminggu)
+                        @continue;
+                    @endif
+                    @if ($t->tanggal < $sekarang)
+                        @continue;
+                    @endif
+                    <p>{{ $t->tanggal }} <br>
+                        {{ $t->nama }}
+                    </p>
+                @endforeach
             </div>
         </div>
     </div>
