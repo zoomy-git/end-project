@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('partials.import')
-
+    <link rel="icon" href="shortcut.png" type="image/gif" sizes="16x16">
     <title>Landing Page</title>
     
 <style>
