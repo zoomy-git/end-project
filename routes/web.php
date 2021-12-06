@@ -20,7 +20,7 @@ use App\Http\Controllers\AktivitasController;
 
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-    Route::get('/', [ControllerHalaman::class, 'beranda']);
+    Route::get('/', [BerandaController::class, 'index']);
     Route::get('/dashboard', [ControllerHalaman::class, 'beranda']);
     Route::get('/Materi', [MateriController::class, 'index']);
     Route::get('/Target', [TargetController::class, 'index']);
