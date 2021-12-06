@@ -9,12 +9,13 @@
     body{
         
         height: 100vh;
+        justify-content: center;
     }
 </style>
 
 </head>
 <body>
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
         <div class="container-sm">
             <span>
                 

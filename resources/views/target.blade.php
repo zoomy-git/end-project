@@ -20,7 +20,7 @@
             </button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -41,8 +41,27 @@
                                 </div>
                             </div>
 
+<<<<<<< HEAD
                             <input type="date" name="tanggal" id="tanggal" required>
                             <input type="text" name="kategori" id="kategori" placeholder="Kategori" required>
+=======
+                            <div class="row mb-3">
+                                <x-jet-label for="tanggal" value="{{ __('Deadline') }}" />
+                                <div class="col-md-10 w-auto">
+                                    
+                                <x-jet-input id="tanggal" class="block mt-1 w-full" type="date" name="tanggal" placeholder="Tenggat Waktu" required autofocus/>
+                                </div> 
+                            </div>
+
+                            <div class="row mb-3">
+                                <x-jet-label for="kategori" value="{{ __('Kategori') }}" />
+                                <div class="col-md-10 w-auto">
+                                    
+                                <x-jet-input id="kategori" class="block mt-1 w-full" type="text" name="kategori" placeholder="Kategori" required autofocus/>
+                                </div> 
+                            </div>
+                            
+>>>>>>> 6f3bcce4befbcfaf8e4b249ec568f13a454cb183
                             <input type="submit">
                         </form>
                     </div>
