@@ -49,6 +49,7 @@ class AktivitasController extends Controller
         $tambah->pukul = $request->pukul;
         $tambah->kategori = $request->kategori;
         $tambah->tanggal = $request->tanggal;
+        $tambah->user_id = $request->user_id;
         $tambah->save();
         return redirect('/Aktivitas');
     }

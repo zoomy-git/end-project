@@ -22,6 +22,7 @@
                     <div class="modal-body">
                         <form action="{{ route('tambahaktivitas') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
                             <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas">
                             <input type="time" name="pukul" id="pukul">
                             <input type="date" name="tanggal" id="tanggal">
@@ -32,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <h3>Aktivitas Hari Ini ({{ $cdate = date('Y-m-d');  }}) :</h3>
+        <h3>Aktivitas Hari Ini ({{ $cdate = date('Y-m-d') }}) :</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -45,6 +46,9 @@
             <tbody>
                 @foreach ($aktivitas as $a)
                     <tr>
+                        @if (!($a->user_id === Auth::user()->id))
+                            @continue;
+                        @endif
                         @if ($a->tanggal != $cdate)
                             @continue;
                         @endif

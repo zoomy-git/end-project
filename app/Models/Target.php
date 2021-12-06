@@ -12,4 +12,5 @@ class Target extends Model
     protected $fillable = [
         'nama', 'tanggal','kategori',
     ];
+
 }

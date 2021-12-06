@@ -15,6 +15,7 @@ class CreateTargetsTable extends Migration
     {
         Schema::create('targets', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('nama');
             $table->date('tanggal');
             $table->text('kategori');

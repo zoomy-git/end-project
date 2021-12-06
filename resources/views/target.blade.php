@@ -21,6 +21,7 @@
                     <div class="modal-body">
                         <form action="{{ route('tambahtarget') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
                             <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas">
                             <input type="date" name="tanggal" id="tanggal">
                             <input type="text" name="kategori" id="kategori" placeholder="Kategori">
@@ -41,6 +42,9 @@
             <tbody>
                 @foreach ($target as $t)
                     <tr>
+                        @if (!($t->user_id===Auth::user()->id))
+                            @continue;
+                        @endif
                         <td>{{ $t->nama }}</td>
                         <td>{{ $t->tanggal }}</td>
                         <td>{{ $t->kategori }}</td>

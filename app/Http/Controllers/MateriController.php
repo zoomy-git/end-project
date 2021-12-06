@@ -54,6 +54,7 @@ class MateriController extends Controller
         $tambah->link = $embed;
         $tambah->deskripsi = $request->deskripsi;
         $tambah->kategori = $request->kategori;
+        $tambah->user_id = $request->user_id;
         $tambah->save();
         return redirect('/Materi');
     }

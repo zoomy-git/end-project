@@ -15,6 +15,7 @@ class CreateAktivitasTable extends Migration
     {
         Schema::create('aktivitas', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->time('pukul');
             $table->string('nama');
             $table->string('kategori');

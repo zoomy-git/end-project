@@ -16,26 +16,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        for($x = 1; $x <= 10; $x++){
-            DB::table('aktivitas')->insert([
-                'pukul' => Carbon::now(),
-                'tanggal' => Carbon::now(),
-                'nama' => Str::random(10),
-                'kategori' => Str::random(10),
-            ]);
-            DB::table('materis')->insert([
-                'link' => "https://www.youtube.com/embed/S0nAJjAqfpQ",
-                'isVideo' =>true,
-                'kategori' => "Pemrograman Web",
-                'deskripsi' => "Apa itu method POST dan GET",
-            ]);
-            DB::table('targets')->insert([
-                'nama' => Str::random(10),
-                'tanggal' => Carbon::now(),
-                'kategori' => Str::random(10),
-            ]);
+        \App\Models\User::factory(10)->create();
+        // for($x = 1; $x <= 10; $x++){
+        //     DB::table('aktivitas')->insert([
+        //         'pukul' => Carbon::now(),
+        //         'tanggal' => Carbon::now(),
+        //         'nama' => Str::random(10),
+        //         'kategori' => Str::random(10),
+        //     ]);
+        //     DB::table('materis')->insert([
+        //         'link' => "https://www.youtube.com/embed/S0nAJjAqfpQ",
+        //         'isVideo' =>true,
+        //         'kategori' => "Pemrograman Web",
+        //         'deskripsi' => "Apa itu method POST dan GET",
+        //     ]);
+        //     DB::table('targets')->insert([
+        //         'nama' => Str::random(10),
+        //         'tanggal' => Carbon::now(),
+        //         'kategori' => Str::random(10),
+        //     ]);
 
-        }
+        // }
     }
 }

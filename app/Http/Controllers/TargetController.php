@@ -14,16 +14,11 @@ class TargetController extends Controller
      */
     public function index()
     {
-        //
-          	// mengambil data pegawai
-    	$target=Target::orderBy('tanggal','ASC')->get();
-
+        $target = Target::orderBy('tanggal', 'ASC')->get();
         return view('Target', [
             'judul' => "Target",
             'target' => $target
         ]);
- 
-    	// mengirim data targets ke view targets
     }
 
     /**
@@ -49,6 +44,7 @@ class TargetController extends Controller
         $tambah->nama = $request->nama;
         $tambah->kategori = $request->kategori;
         $tambah->tanggal = $request->tanggal;
+        $tambah->user_id = $request->user_id;
         $tambah->save();
         return redirect('/Target');
     }

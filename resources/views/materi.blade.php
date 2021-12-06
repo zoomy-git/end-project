@@ -21,6 +21,7 @@
                     <div class="modal-body">
                         <form action="{{ route('tambahmateri') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
                             <input type="text" name="link" id="link" placeholder="Link Materi">
                             <input type="text" name="kategori" id="kategori" placeholder="Judul">
                             <input type="text" name="deskripsi" id="deskripsi" placeholder="deskripsi singkat">
@@ -46,6 +47,9 @@
             </thead>
             <tbody>
                 @foreach ($materi as $m)
+                    @if (!($m->user_id === Auth::user()->id))
+                        @continue;
+                    @endif
                     @if (!$m->isVideo)
                         @continue;
                     @endif
@@ -109,6 +113,9 @@
             </thead>
             <tbody>
                 @foreach ($materi as $m)
+                    @if (!($m->user_id === Auth::user()->id))
+                        @continue;
+                    @endif
                     @if ($m->isVideo)
                         @continue;
                     @endif
