@@ -17,7 +17,8 @@ class TargetController extends Controller
         $target = Target::orderBy('tanggal', 'ASC')->get();
         return view('Target', [
             'judul' => "Target",
-            'target' => $target
+            'target' => $target,
+            'sekarang'=> date('Y-m-d'),
         ]);
     }
 
