@@ -20,7 +20,7 @@
             <span>
                 
             <h1><strong>One for All App</strong></h1>
-            <h4>some persuasive words to make<br> you want to use this web app</h4> 
+            <h4>An app to help you manage<br>and organize</h4> 
             </span>
         </div>
 
