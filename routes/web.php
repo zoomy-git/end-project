@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AktivitasController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerHalaman;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\TargetController;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\ControllerHalaman;
+use App\Http\Controllers\AktivitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('/Materi', [MateriController::class, 'index']);
     Route::get('/Target', [TargetController::class, 'index']);
     Route::get('/Aktivitas', [AktivitasController::class, 'index']);
+    Route::get('/Beranda', [BerandaController::class, 'index']);
     Route::get('/{halaman}', [ControllerHalaman::class, 'index']);
 
     Route::post('/tambahaktivitas', [AktivitasController::class, 'store'])->name('tambahaktivitas');
