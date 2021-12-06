@@ -1,8 +1,23 @@
-<x-guest-layout>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @include('partials.import')
+
+    <title>Landing Page</title>
+    
+<style>
+    body{
+        
+        height: 100vh;
+    }
+</style>
+
+</head>
+
+<body>
+
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -11,7 +26,7 @@
 
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
-            <div class="block">
+            <div class="mb-3">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
             </div>
@@ -33,4 +48,5 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+        
+</body>
