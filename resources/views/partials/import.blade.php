@@ -30,7 +30,6 @@
 
         background-color: rgb(248, 245, 241, 0.4);
 
-        align-items: center;
         justify-content: center;
     }
 

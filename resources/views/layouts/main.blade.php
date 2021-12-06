@@ -12,7 +12,7 @@
         @yield('header')
         
         <div class="card-body light d-flex" 
-        style="height:50vh"
+        style="height:auto;"
         >
             @yield('content')
         </div>
