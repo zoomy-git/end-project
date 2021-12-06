@@ -7,7 +7,7 @@
 @section('content')
     <div class="container d-flex flex-row justify-content-center align-self-center">
         <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
-        <div class="quote mx-3 d-flex align-items-center" style="width: 50vh; font-family: 'Kalam';">
+        <div class="quote mx-3 d-flex align-items-center flex-column" style="width: 50vh; font-family: 'Kalam';">
             <div class="row d-flex">
 
                 <h4>

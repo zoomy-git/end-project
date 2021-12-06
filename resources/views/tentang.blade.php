@@ -12,12 +12,10 @@
         </div>
         <div class="mx-5 my-4">
             <h3>
-                <strong>your_average_company</strong>
-                , sebuah tim kecil yang Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, ut magni repudiandae consequatur quidem, libero praesentium dolores sunt ratione doloremque quaerat? Modi voluptas nihil quae, nemo repudiandae.
+                Kami adalah sebuah tim kecil pengembang pemula yang beranggotakan dua orang saat mengembangkan aplikasi web "One for All" ini.
             </h3>
             <h3>
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo dolor odit. Exercitationem facilis laborum ratione sit fugit neque culpa vel. Maxime laudantium molestias eveniet, aut sunt ea aliquid quibusdam reiciendis provident dolores rerum odit quas ducimus qui architecto eligendi unde! Dolores quas pariatur tempora!
+                Aplikasi web ini merupakan proyek pertama kami dalam pengembangan web. Kami ingin menciptakan sebuah aplikasi sederhana yang bisa digunakan siapa saja baik mahasiswa atau pekerja. Saya dan teman saya mulai belajar pemrograman web sekitar 6 bulan yang lalu. Apabila ada kekurangan dalam aplikasi ini, mohon dimaklumi.
             </h3>
         </div>
         

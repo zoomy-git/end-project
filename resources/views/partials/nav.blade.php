@@ -6,7 +6,7 @@
                     onclick="event.preventDefault();
                         this.closest('form').submit();">
             <strong>
-            {{ __('here to logout') }}
+            {{ __('logout') }}
             </strong>
         </a>
         

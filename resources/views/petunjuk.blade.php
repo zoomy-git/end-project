@@ -12,9 +12,12 @@
         </div>
         <div class="container mx-5 my-3">
             <ul class="list-group list-group-flush d-flex flex-column mx-5 my-3">
-                <li class="mb-3 me-5"><h4><strong>Aktivitas</strong>, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit cursus risus at ultrices mi tempus imperdiet. </h4></li>
-                <li class="mb-3 me-5"><h4><strong>Materi</strong>, Cras semper auctor neque vitae tempus quam pellentesque nec. Mi proin sed libero enim sed faucibus. Velit scelerisque in dictum non consectetur. </h4></li>
-                <li class="mb-3 me-5"><h4><strong>Target</strong>, Ultricies mi quis hendrerit dolor magna eget est. Convallis convallis tellus id interdum velit. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</h4></li>
+                <li class="mb-3 me-5"><h4><strong>Aktivitas</strong>
+                    , digunakan untuk mencatat kegiatan apa yang akan dilakukan hari ini. </h4></li>
+                <li class="mb-3 me-5"><h4><strong>Materi</strong>
+                    , digunakan untuk mencantumkan pranala luar yang bisa dicek kapan saja. </h4></li>
+                <li class="mb-3 me-5"><h4><strong>Target</strong>
+                    , digunakan untuk menyimpan waktu tenggat untuk menyelesaikan suatu pekerjaan.</h4></li>
             </ul>
         </div>
     </div>
