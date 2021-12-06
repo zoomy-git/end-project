@@ -12,7 +12,7 @@
     
     .light{
         border: 0px;
-        background-color: rgb(248, 245, 241, 1);
+        background-color: #F8F5F1;
         color: rgb(87, 68, 62);
     }
 

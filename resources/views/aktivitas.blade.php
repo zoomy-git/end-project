@@ -26,18 +26,18 @@
                     <div class="modal-body">
                         <form action="{{ route('tambahaktivitas') }}" method="POST">
                             @csrf
-                            <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
-                            <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas">
-                            <input type="time" name="pukul" id="pukul">
-                            <input type="date" name="tanggal" id="tanggal">
-                            <input type="text" name="kategori" id="kategori" placeholder="Kategori">
+                            <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }} required>
+                            <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas" required>
+                            <input type="time" name="pukul" id="pukul" required>
+                            <input type="date" name="tanggal" id="tanggal" required>
+                            <input type="text" name="kategori" id="kategori" placeholder="Kategori" required>
                             <input type="submit">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-bordered my-3">
+        <table class="table table-striped table-bordered my-3 shadow">
             <thead>
                 <tr>
                     <th scope="col">Pukul</th>
@@ -75,10 +75,10 @@
                                         <div class="modal-body">
                                             <form action="{{ route('updateaktivitas') }}" method="POST">
                                                 @csrf
-                                                <input type="hidden" name="id" id="id" value={{ $a->id }}>
-                                                <input type="text" name="nama" id="nama" value="{{ $a->nama }}">
-                                                <input type="time" name="pukul" id="pukul" value="{{ $a->pukul }}">
-                                                <input type="date" name="tanggal" id="tanggal" value="{{ $a->tanggal }}">
+                                                <input type="hidden" name="id" id="id" value={{ $a->id }} required>
+                                                <input type="text" name="nama" id="nama" value="{{ $a->nama }}" required>
+                                                <input type="time" name="pukul" id="pukul" value="{{ $a->pukul }}" required>
+                                                <input type="date" name="tanggal" id="tanggal" value="{{ $a->tanggal }}" required>
                                                 <input type="text" name="kategori" id="kategori"
                                                     value="{{ $a->kategori }}">
                                                 <input type="submit">

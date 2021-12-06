@@ -18,14 +18,22 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Tambah Target</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="{{ route('tambahtarget') }}" method="POST">
                             @csrf
+                            
                             <input type="hidden" name="user_id" id="user_id" value={{ Auth::user()->id }}>
-                            <input type="text" name="nama" id="nama" placeholder="Nama Aktivitas" required>
+                            <div class="row mb-3">
+                                <x-jet-label for="name" value="{{ __('Nama Aktivitas') }}" />
+                                <div class="col-md-10 w-auto">
+                                    
+                                <x-jet-input id="nama" class="block mt-1 w-full" type="text" name="nama" placeholder="Nama Aktivitas" required autofocus/>
+                                </div> 
+                            </div>
+                            
                             <input type="date" name="tanggal" id="tanggal" required>
                             <input type="text" name="kategori" id="kategori" placeholder="Kategori" required>
                             <input type="submit">
@@ -34,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-bordered my-3">
+        <table class="table table-striped table-bordered my-3 shadow">
             <thead>
                 <tr>
                     <th scope="col">Target</th>

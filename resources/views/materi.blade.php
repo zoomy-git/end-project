@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-bordered my-3">
+        <table class="table table-striped table-bordered my-3 shadow">
             <thead>
                 <tr>
                     <th scope="col">Materi</th>
@@ -81,10 +81,10 @@
                                         <div class="modal-body">
                                             <form action="{{ route('updatemateri') }}" method="POST">
                                                 @csrf
-                                                <input type="hidden" name="id" id="id" value={{ $m->id }}>
-                                                <input type="text" name="link" id="link" value="{{ $m->link }}">
+                                                <input type="hidden" name="id" id="id" value={{ $m->id }} required>
+                                                <input type="text" name="link" id="link" value="{{ $m->link }}" required>
                                                 <input type="text" name="kategori" id="kategori"
-                                                    value="{{ $m->kategori }}">
+                                                    value="{{ $m->kategori }}" required>
                                                 <input type="text" name="deskripsi" id="deskripsi"
                                                     value="{{ $m->deskripsi }}">
                                                 <input type="radio" id="video" name="isVideo" value="true">
@@ -104,7 +104,7 @@
             </tbody>
         </table>
 
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered shadow">
             <thead>
                 <tr>
                     <th scope="col">Judul</th>
@@ -143,10 +143,10 @@
                                         <div class="modal-body">
                                             <form action="{{ route('updatemateri') }}" method="POST">
                                                 @csrf
-                                                <input type="hidden" name="id" id="id" value={{ $m->id }}>
-                                                <input type="text" name="link" id="link" value="{{ $m->link }}">
+                                                <input type="hidden" name="id" id="id" value={{ $m->id }} required>
+                                                <input type="text" name="link" id="link" value="{{ $m->link }}" required>
                                                 <input type="text" name="kategori" id="kategori"
-                                                    value="{{ $m->kategori }}">
+                                                    value="{{ $m->kategori }}" required>
                                                 <input type="text" name="deskripsi" id="deskripsi"
                                                     value="{{ $m->deskripsi }}">
                                                 <input type="radio" id="video" name="isVideo" value="true">
